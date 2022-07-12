@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+  // MARK: Properties
+
+  // MARK: Body
+
+  var body: some View {
+    NavigationView {
+      Image(systemName: "photo")
+        .resizable()
+        .scaledToFit()
+        .padding()
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+
+        // MARK: Overlay button
+
+        .overlay(HStack {}, alignment: .bottom)
+
+        .navigationTitle("CoreML")
+        .navigationBarTitleDisplayMode(.inline)
+    } //: NavigationView
+    .navigationViewStyle(.stack)
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-        .previewDevice("iPhone 13")
-    }
+  static var previews: some View {
+    ContentView()
+      .previewDevice("iPhone 13")
+  }
 }

@@ -10,6 +10,9 @@ import SwiftUI
 struct ContentView: View {
   // MARK: Properties
 
+  @State private var image: UIImage = (.init(named: "image-placeholder") ?? .init())
+  @State private var showPicker: Bool = false
+
   // MARK: Body
 
   var body: some View {
@@ -17,7 +20,7 @@ struct ContentView: View {
       ZStack(alignment: .bottom) {
         // MARK: Image
 
-        Image("image-placeholder")
+        Image(uiImage: image)
           .resizable()
           .scaledToFit()
 
@@ -44,6 +47,9 @@ struct ContentView: View {
       .navigationBarTitleDisplayMode(.inline)
     } //: NavigationView
     .navigationViewStyle(.stack)
+    .sheet(isPresented: $showPicker) {
+      ImagePicker(sourceType: .camera, selectedImage: $image)
+    }
   }
 }
 

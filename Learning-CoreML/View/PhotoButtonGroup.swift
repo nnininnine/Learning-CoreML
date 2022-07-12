@@ -16,7 +16,7 @@ struct PhotoButtonGroup: View {
   // MARK: Body
 
   var body: some View {
-    HStack(spacing: 32) {
+    HStack(spacing: 24) {
       Button {
         onTapTakePhoto()
       } label: {

@@ -14,18 +14,34 @@ struct ContentView: View {
 
   var body: some View {
     NavigationView {
-      Image(systemName: "photo")
-        .resizable()
-        .scaledToFit()
-        .padding()
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+      ZStack(alignment: .bottom) {
+        // MARK: Image
 
-        // MARK: Overlay button
+        Image("image-placeholder")
+          .resizable()
+          .scaledToFit()
 
-        .overlay(HStack {}, alignment: .bottom)
+          // MARK: Overlay Result
 
-        .navigationTitle("CoreML")
-        .navigationBarTitleDisplayMode(.inline)
+          .overlay(
+            Text("Prediction: ")
+              .foregroundColor(Color(uiColor: .label))
+              .padding()
+              .background(.ultraThinMaterial)
+              .cornerRadius(12)
+              .padding(),
+            alignment: .topLeading
+          )
+
+        // MARK: Photo button
+
+        PhotoButtonGroup(onTapTakePhoto: {}, onTapGallery: {})
+          .alignmentGuide(VerticalAlignment.bottom) { d in d[.bottom] - 72 }
+      } //: ZStack
+
+      .padding(24)
+      .navigationTitle("CoreML")
+      .navigationBarTitleDisplayMode(.inline)
     } //: NavigationView
     .navigationViewStyle(.stack)
   }

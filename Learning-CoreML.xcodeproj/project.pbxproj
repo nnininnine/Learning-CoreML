@@ -14,6 +14,7 @@
 		695B44C1287D104600231694 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 695B44C0287D104600231694 /* SqueezeNet.mlmodel */; };
 		695B44C5287D182D00231694 /* PhotoButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B44C4287D182D00231694 /* PhotoButtonGroup.swift */; };
 		695B44C7287D245C00231694 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B44C6287D245C00231694 /* ImagePicker.swift */; };
+		695B44C9287D2A5000231694 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B44C8287D2A5000231694 /* PhotoPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		695B44C0287D104600231694 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		695B44C4287D182D00231694 /* PhotoButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButtonGroup.swift; sourceTree = "<group>"; };
 		695B44C6287D245C00231694 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		695B44C8287D2A5000231694 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				695B44C4287D182D00231694 /* PhotoButtonGroup.swift */,
 				695B44C6287D245C00231694 /* ImagePicker.swift */,
+				695B44C8287D2A5000231694 /* PhotoPicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				695B44C5287D182D00231694 /* PhotoButtonGroup.swift in Sources */,
 				695B44B1287D0F2600231694 /* ContentView.swift in Sources */,
+				695B44C9287D2A5000231694 /* PhotoPicker.swift in Sources */,
 				695B44C7287D245C00231694 /* ImagePicker.swift in Sources */,
 				695B44C1287D104600231694 /* SqueezeNet.mlmodel in Sources */,
 				695B44AF287D0F2600231694 /* Learning_CoreMLApp.swift in Sources */,

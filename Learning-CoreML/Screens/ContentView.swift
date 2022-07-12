@@ -5,12 +5,14 @@
 //  Created by 7Peaks on 12/7/2565 BE.
 //
 
+import PhotosUI
 import SwiftUI
 
 struct ContentView: View {
   // MARK: Properties
 
   @State private var image: UIImage = (.init(named: "image-placeholder") ?? .init())
+  @State private var showCamera: Bool = false
   @State private var showPicker: Bool = false
 
   // MARK: Body
@@ -38,8 +40,19 @@ struct ContentView: View {
 
         // MARK: Photo button
 
-        PhotoButtonGroup(onTapTakePhoto: {}, onTapGallery: {})
-          .alignmentGuide(VerticalAlignment.bottom) { d in d[.bottom] - 72 }
+        PhotoButtonGroup(onTapTakePhoto: {
+          guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            showPicker.toggle()
+            return
+          }
+
+          showCamera.toggle()
+        }, onTapGallery: {
+          guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return }
+
+          showPicker.toggle()
+        })
+        .alignmentGuide(VerticalAlignment.bottom) { d in d[.bottom] - 72 }
       } //: ZStack
 
       .padding(24)
@@ -47,8 +60,12 @@ struct ContentView: View {
       .navigationBarTitleDisplayMode(.inline)
     } //: NavigationView
     .navigationViewStyle(.stack)
-    .sheet(isPresented: $showPicker) {
+    .sheet(isPresented: $showCamera) {
       ImagePicker(sourceType: .camera, selectedImage: $image)
+    }
+    .sheet(isPresented: $showPicker) {
+      let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
+      PhotoPicker(configuration: configuration, selectedImage: $image)
     }
   }
 }

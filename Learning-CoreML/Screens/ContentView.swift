@@ -64,8 +64,9 @@ struct ContentView: View {
       ImagePicker(sourceType: .camera, selectedImage: $image)
     }
     .sheet(isPresented: $showPicker) {
-      let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
-      PhotoPicker(configuration: configuration, selectedImage: $image)
+      ImagePicker(sourceType: .photoLibrary, selectedImage: $image)
+//      let configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
+//      PhotoPicker(configuration: configuration, selectedImage: $image)
     }
   }
 }

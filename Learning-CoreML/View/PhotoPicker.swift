@@ -38,9 +38,8 @@ struct PhotoPicker: UIViewControllerRepresentable {
     }
 
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-      print(results)
 
-      if !results.isEmpty {
+      if results.isEmpty {
         parent.itemProviders = []
         parent.selectedImage = UIImage(named: "image-placeholder") ?? UIImage()
 

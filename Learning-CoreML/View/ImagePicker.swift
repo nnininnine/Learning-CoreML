@@ -11,6 +11,7 @@ struct ImagePicker: UIViewControllerRepresentable {
   @Environment(\.presentationMode) private var presentationMode
   var sourceType: UIImagePickerController.SourceType = .photoLibrary
   @Binding var selectedImage: UIImage
+  var completion: (Bool) -> Void
 
   func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
     let imagePicker = UIImagePickerController()
@@ -39,7 +40,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         parent.selectedImage = image
       }
 
-      parent.presentationMode.wrappedValue.dismiss()
+      parent.completion(true)
     }
   }
 }

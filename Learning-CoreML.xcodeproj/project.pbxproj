@@ -53,8 +53,9 @@
 		695B44AD287D0F2600231694 /* Learning-CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				695B44C3287D17CA00231694 /* Base */,
 				695B44BD287D100700231694 /* Model */,
-				695B44AE287D0F2600231694 /* Learning_CoreMLApp.swift */,
+				695B44C2287D17C100231694 /* View */,
 				695B44BC287D0F3300231694 /* Screens */,
 				695B44B2287D0F2800231694 /* Assets.xcassets */,
 				695B44B4287D0F2800231694 /* Preview Content */,
@@ -84,6 +85,21 @@
 				695B44C0287D104600231694 /* SqueezeNet.mlmodel */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		695B44C2287D17C100231694 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		695B44C3287D17CA00231694 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				695B44AE287D0F2600231694 /* Learning_CoreMLApp.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

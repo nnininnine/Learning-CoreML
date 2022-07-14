@@ -18,35 +18,33 @@ struct ContentView: View {
   // MARK: Body
 
   var body: some View {
-    NavigationView {
-      ZStack(alignment: .bottom) {
-        // MARK: Image
+    ZStack(alignment: .bottom) {
+      // MARK: Image
 
-        Image(uiImage: vm.image)
-          .resizable()
-          .scaledToFit()
+      Image(uiImage: vm.image)
+        .resizable()
+        .scaledToFit()
 
-          // MARK: Overlay Result
+        // MARK: Overlay Result
 
-          .overlay(
-            Text("Prediction: \(vm.predictedText)")
-              .foregroundColor(Color(uiColor: .label))
-              .padding()
-              .background(.ultraThinMaterial)
-              .cornerRadius(12)
-              .padding(),
-            alignment: .topLeading
-          )
+        .overlay(
+          Text("Prediction: \(vm.predictedText)")
+            .foregroundColor(Color(uiColor: .label))
+            .padding()
+            .background(.ultraThinMaterial)
+            .cornerRadius(12)
+            .padding(),
+          alignment: .topLeading
+        )
 
-        // MARK: Photo button
+      // MARK: Photo button
 
-        PhotoButtonGroup(onTapTakePhoto: vm.takePhoto, onTapGallery: vm.openPicker)
-          .alignmentGuide(VerticalAlignment.bottom) { d in d[.bottom] - 72 }
-      } //: ZStack
-      .padding(24)
-      .navigationTitle("CoreML")
-      .navigationBarTitleDisplayMode(.inline)
-    } //: NavigationView
+      PhotoButtonGroup(onTapTakePhoto: vm.takePhoto, onTapGallery: vm.openPicker)
+        .alignmentGuide(VerticalAlignment.bottom) { d in d[.bottom] - 72 }
+    } //: ZStack
+    .padding(24)
+    .navigationTitle("CoreML")
+    .navigationBarTitleDisplayMode(.inline)
     .navigationViewStyle(.stack)
     .sheet(isPresented: $vm.showCamera) {
       ImagePicker(sourceType: .camera, selectedImage: $vm.image, completion: { selected in

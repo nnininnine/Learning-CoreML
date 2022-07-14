@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+  // MARK: Properties
+
+  @StateObject private var vm: HomeViewModel = .init()
+
+  // MARK: Body
+
   var body: some View {
     NavigationView {
       List {
-        ForEach(0 ..< 5) { _ in
-          Button {
-            print("get in module")
-          } label: {
-            Text("Template")
+        ForEach(vm.modules) { module in
+          NavigationLink(destination: module.view) {
+            Text(module.name)
               .foregroundColor(Color(uiColor: .label))
               .font(.system(size: 18, weight: .medium))
           }

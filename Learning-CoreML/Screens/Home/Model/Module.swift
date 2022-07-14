@@ -9,7 +9,8 @@ import SwiftUI
 
 typealias Modules = [Module]
 
-struct Module {
+struct Module: Identifiable {
+  var id = UUID()
   var name: String
   var view: AnyView
 }

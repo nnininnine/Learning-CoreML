@@ -8,5 +8,11 @@
 import SwiftUI
 
 class HomeViewModel: ObservableObject {
-  
+  // MARK: Properties
+
+  let modules: Modules = [
+    Module(name: "ImageClassification", view: AnyView(ContentView()))
+  ]
+
+  // MARK: Methods
 }

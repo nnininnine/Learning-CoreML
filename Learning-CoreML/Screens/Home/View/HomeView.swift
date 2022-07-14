@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct HomeView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  var body: some View {
+    NavigationView {
+      List {
+        ForEach(0 ..< 5) { _ in
+          Button {
+            print("get in module")
+          } label: {
+            Text("Template")
+              .foregroundColor(Color(uiColor: .label))
+              .font(.system(size: 18, weight: .medium))
+          }
+        }
+      }
+      .navigationTitle("Learning CoreML")
+      .navigationBarTitleDisplayMode(.large)
     }
+    .navigationViewStyle(.stack)
+  }
 }
 
 struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
+  static var previews: some View {
+    HomeView()
+  }
 }

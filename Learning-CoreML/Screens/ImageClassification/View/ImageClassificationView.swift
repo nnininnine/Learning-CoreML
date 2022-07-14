@@ -8,7 +8,7 @@
 import PhotosUI
 import SwiftUI
 
-struct ContentView: View {
+struct ImageClassificationView: View {
   // MARK: Properties
 
   @StateObject private var vm: ContentViewModel = .init()
@@ -43,7 +43,7 @@ struct ContentView: View {
         .alignmentGuide(VerticalAlignment.bottom) { d in d[.bottom] - 72 }
     } //: ZStack
     .padding(24)
-    .navigationTitle("CoreML")
+    .navigationTitle("Image Classification")
     .navigationBarTitleDisplayMode(.inline)
     .navigationViewStyle(.stack)
     .sheet(isPresented: $vm.showCamera) {
@@ -69,7 +69,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    ImageClassificationView()
       .previewDevice("iPhone 13")
   }
 }

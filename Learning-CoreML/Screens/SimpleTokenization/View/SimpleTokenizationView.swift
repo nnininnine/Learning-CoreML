@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct SimpleTokenizationView: View {
+  // MARK: Properties
+
+  @State private var text: String = ""
+
+  // MARK: Body
+
   var body: some View {
-    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    VStack(alignment: .leading) {
+      Text(text)
+      Spacer()
+      TextField("Enter text here <3", text: $text)
+        .textFieldStyle(.roundedBorder)
+    }
+    .padding()
+    .navigationTitle("Simple Tokenization")
+    .navigationBarTitleDisplayMode(.inline)
   }
 }
 

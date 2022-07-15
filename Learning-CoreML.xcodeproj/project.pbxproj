@@ -24,6 +24,8 @@
 		69783E6E287FB70600520D1D /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69783E6D287FB70600520D1D /* Module.swift */; };
 		69783E70287FB7CC00520D1D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69783E6F287FB7CC00520D1D /* HomeViewModel.swift */; };
 		698C1595288133370014C394 /* SwiftUIChipGroup in Frameworks */ = {isa = PBXBuildFile; productRef = 698C1594288133370014C394 /* SwiftUIChipGroup */; };
+		698C15C028815BAB0014C394 /* sign-language-classification.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 698C15BF28815BAB0014C394 /* sign-language-classification.mlpackage */; };
+		698C15C228815C2F0014C394 /* SignLangClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C15C128815C2F0014C394 /* SignLangClassification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		69783E6D287FB70600520D1D /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		69783E6F287FB7CC00520D1D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		698C15922881332F0014C394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		698C15BF28815BAB0014C394 /* sign-language-classification.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "sign-language-classification.mlpackage"; sourceTree = "<group>"; };
+		698C15C128815C2F0014C394 /* SignLangClassification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLangClassification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		695B44BD287D100700231694 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				698C15BF28815BAB0014C394 /* sign-language-classification.mlpackage */,
 				695B44C0287D104600231694 /* SqueezeNet.mlmodel */,
 			);
 			path = Model;
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				695B44CB287D317200231694 /* ImageClassification.swift */,
+				698C15C128815C2F0014C394 /* SignLangClassification.swift */,
 			);
 			path = Prediction;
 			sourceTree = "<group>";
@@ -331,7 +337,9 @@
 				69783E68287FB2C400520D1D /* HomeView.swift in Sources */,
 				69783E70287FB7CC00520D1D /* HomeViewModel.swift in Sources */,
 				69336B5F288125FF00778B27 /* SimpleTokenizationViewModel.swift in Sources */,
+				698C15C028815BAB0014C394 /* sign-language-classification.mlpackage in Sources */,
 				695B44D0287D4D8C00231694 /* ContentViewModel.swift in Sources */,
+				698C15C228815C2F0014C394 /* SignLangClassification.swift in Sources */,
 				695B44C5287D182D00231694 /* PhotoButtonGroup.swift in Sources */,
 				69783E6E287FB70600520D1D /* Module.swift in Sources */,
 				695B44B1287D0F2600231694 /* ImageClassificationView.swift in Sources */,

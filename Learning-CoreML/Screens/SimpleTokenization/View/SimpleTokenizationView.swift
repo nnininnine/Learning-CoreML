@@ -30,5 +30,6 @@ struct SimpleTokenizationView: View {
 struct SimpleTokenization_Previews: PreviewProvider {
   static var previews: some View {
     SimpleTokenizationView()
+      .previewDevice("iPhone 13")
   }
 }

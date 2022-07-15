@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		69336B5828810B9C00778B27 /* SignLangClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69336B5728810B9C00778B27 /* SignLangClassificationView.swift */; };
 		69336B5C28810DE300778B27 /* SimpleTokenizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69336B5B28810DE300778B27 /* SimpleTokenizationView.swift */; };
+		69336B5F288125FF00778B27 /* SimpleTokenizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69336B5E288125FF00778B27 /* SimpleTokenizationViewModel.swift */; };
 		695B44AF287D0F2600231694 /* Learning_CoreMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B44AE287D0F2600231694 /* Learning_CoreMLApp.swift */; };
 		695B44B1287D0F2600231694 /* ImageClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B44B0287D0F2600231694 /* ImageClassificationView.swift */; };
 		695B44B3287D0F2800231694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695B44B2287D0F2800231694 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		69336B5728810B9C00778B27 /* SignLangClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLangClassificationView.swift; sourceTree = "<group>"; };
 		69336B5B28810DE300778B27 /* SimpleTokenizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTokenizationView.swift; sourceTree = "<group>"; };
+		69336B5E288125FF00778B27 /* SimpleTokenizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTokenizationViewModel.swift; sourceTree = "<group>"; };
 		695B44AB287D0F2600231694 /* Learning-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		695B44AE287D0F2600231694 /* Learning_CoreMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_CoreMLApp.swift; sourceTree = "<group>"; };
 		695B44B0287D0F2600231694 /* ImageClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		69336B5928810DAF00778B27 /* SimpleTokenization */ = {
 			isa = PBXGroup;
 			children = (
+				69336B5D2881258700778B27 /* ViewModel */,
 				69336B5A28810DD100778B27 /* View */,
 			);
 			path = SimpleTokenization;
@@ -84,6 +87,14 @@
 				69336B5B28810DE300778B27 /* SimpleTokenizationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		69336B5D2881258700778B27 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				69336B5E288125FF00778B27 /* SimpleTokenizationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		695B44A2287D0F2600231694 = {
@@ -301,6 +312,7 @@
 				69336B5C28810DE300778B27 /* SimpleTokenizationView.swift in Sources */,
 				69783E68287FB2C400520D1D /* HomeView.swift in Sources */,
 				69783E70287FB7CC00520D1D /* HomeViewModel.swift in Sources */,
+				69336B5F288125FF00778B27 /* SimpleTokenizationViewModel.swift in Sources */,
 				695B44D0287D4D8C00231694 /* ContentViewModel.swift in Sources */,
 				695B44C5287D182D00231694 /* PhotoButtonGroup.swift in Sources */,
 				69783E6E287FB70600520D1D /* Module.swift in Sources */,

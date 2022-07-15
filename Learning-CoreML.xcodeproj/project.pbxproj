@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69336B5828810B9C00778B27 /* SignLangClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69336B5728810B9C00778B27 /* SignLangClassificationView.swift */; };
 		695B44AF287D0F2600231694 /* Learning_CoreMLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B44AE287D0F2600231694 /* Learning_CoreMLApp.swift */; };
 		695B44B1287D0F2600231694 /* ImageClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B44B0287D0F2600231694 /* ImageClassificationView.swift */; };
 		695B44B3287D0F2800231694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 695B44B2287D0F2800231694 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69336B5728810B9C00778B27 /* SignLangClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignLangClassificationView.swift; sourceTree = "<group>"; };
 		695B44AB287D0F2600231694 /* Learning-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		695B44AE287D0F2600231694 /* Learning_CoreMLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learning_CoreMLApp.swift; sourceTree = "<group>"; };
 		695B44B0287D0F2600231694 /* ImageClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassificationView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69336B5528810B6100778B27 /* SignLangClassification */ = {
+			isa = PBXGroup;
+			children = (
+				69336B5628810B7400778B27 /* View */,
+			);
+			path = SignLangClassification;
+			sourceTree = "<group>";
+		};
+		69336B5628810B7400778B27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69336B5728810B9C00778B27 /* SignLangClassificationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		695B44A2287D0F2600231694 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +108,7 @@
 		695B44BC287D0F3300231694 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				69336B5528810B6100778B27 /* SignLangClassification */,
 				69783E69287FB2D400520D1D /* ImageClassification */,
 				69783E65287FB2A900520D1D /* Home */,
 			);
@@ -270,6 +289,7 @@
 				695B44C7287D245C00231694 /* ImagePicker.swift in Sources */,
 				695B44CC287D317200231694 /* ImageClassification.swift in Sources */,
 				695B44C1287D104600231694 /* SqueezeNet.mlmodel in Sources */,
+				69336B5828810B9C00778B27 /* SignLangClassificationView.swift in Sources */,
 				695B44AF287D0F2600231694 /* Learning_CoreMLApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

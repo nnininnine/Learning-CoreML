@@ -48,7 +48,7 @@ class SignLangClassification {
   private var predictionHandlers = [VNRequest: ImagePredictionHandler]()
 
   private func createImageClassificationRequest() -> VNImageBasedRequest {
-    let imageClassificationRequest = VNCoreMLRequest(model: ImageClassification.imageClassifier, completionHandler: visionRequestHandler)
+    let imageClassificationRequest = VNCoreMLRequest(model: SignLangClassification.imageClassifier, completionHandler: visionRequestHandler)
 
     imageClassificationRequest.imageCropAndScaleOption = .centerCrop
 
@@ -83,7 +83,7 @@ class SignLangClassification {
     }
 
     // Cast the request's results as an `VNClassificationObservation` array.
-    guard let observations = request.results as? [VNClassificationObservation] else {
+    guard let observations = request.results as? [VNCoreMLFeatureValueObservation] else {
       // Image classifiers, like MobileNet, only produce classification observations.
       // However, other Core ML model types can produce other observations.
       // For example, a style transfer model produces `VNPixelBufferObservation` instances.
@@ -94,8 +94,9 @@ class SignLangClassification {
     // Create a prediction array from the observations.
     predictions = observations.map { observation in
       // Convert each observation into an `ImagePredictor.Prediction` instance.
-      Prediction(classification: observation.identifier,
-                 confidencePercentage: observation.confidencePercentageString)
+      print(observation.featureValue.dictionaryValue)
+      return Prediction(classification: observation.description,
+                        confidencePercentage: observation.featureValue.multiArrayValue?.description ?? "")
     }
   }
 

@@ -6,22 +6,29 @@
 //
 
 import SwiftUI
+import SwiftUIChipGroup
 
 struct SimpleTokenizationView: View {
   // MARK: Properties
 
-  @State private var text: String = ""
+  @StateObject private var vm: SimpleTokenizationViewModel = .init()
 
   // MARK: Body
 
   var body: some View {
     VStack(alignment: .leading) {
-      Text(text)
-      Spacer()
-      TextField("Enter text here <3", text: $text)
+      ScrollView {
+        ChipGroup(
+          chips: vm.wordTokenization.map { ChipItem(name: $0) },
+          width: UIScreen.main.bounds.width - 80,
+          selection: .none
+        )
+      }
+      .frame(maxWidth: UIScreen.main.bounds.width - 32)
+      TextField("Enter text here <3", text: $vm.text)
         .textFieldStyle(.roundedBorder)
     }
-    .padding()
+    .padding(.horizontal, 16)
     .navigationTitle("Simple Tokenization")
     .navigationBarTitleDisplayMode(.inline)
   }

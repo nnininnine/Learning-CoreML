@@ -23,6 +23,7 @@
 		69783E68287FB2C400520D1D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69783E67287FB2C400520D1D /* HomeView.swift */; };
 		69783E6E287FB70600520D1D /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69783E6D287FB70600520D1D /* Module.swift */; };
 		69783E70287FB7CC00520D1D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69783E6F287FB7CC00520D1D /* HomeViewModel.swift */; };
+		698C1595288133370014C394 /* SwiftUIChipGroup in Frameworks */ = {isa = PBXBuildFile; productRef = 698C1594288133370014C394 /* SwiftUIChipGroup */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		69783E67287FB2C400520D1D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		69783E6D287FB70600520D1D /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		69783E6F287FB7CC00520D1D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		698C15922881332F0014C394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				698C1595288133370014C394 /* SwiftUIChipGroup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +105,7 @@
 			children = (
 				695B44AD287D0F2600231694 /* Learning-CoreML */,
 				695B44AC287D0F2600231694 /* Products */,
+				698C1593288133370014C394 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +120,7 @@
 		695B44AD287D0F2600231694 /* Learning-CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				698C15922881332F0014C394 /* Info.plist */,
 				695B44CA287D315B00231694 /* Prediction */,
 				695B44C3287D17CA00231694 /* Base */,
 				695B44C2287D17C100231694 /* View */,
@@ -239,6 +244,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		698C1593288133370014C394 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +267,9 @@
 			dependencies = (
 			);
 			name = "Learning-CoreML";
+			packageProductDependencies = (
+				698C1594288133370014C394 /* SwiftUIChipGroup */,
+			);
 			productName = "Learning-CoreML";
 			productReference = 695B44AB287D0F2600231694 /* Learning-CoreML.app */;
 			productType = "com.apple.product-type.application";
@@ -283,6 +298,9 @@
 				Base,
 			);
 			mainGroup = 695B44A2287D0F2600231694;
+			packageReferences = (
+				6915BE362881319F00A69AF8 /* XCRemoteSwiftPackageReference "SwiftUIChipGroup" */,
+			);
 			productRefGroup = 695B44AC287D0F2600231694 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -456,6 +474,7 @@
 				DEVELOPMENT_TEAM = A2DNT83345;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Learning-CoreML/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Use camera for learning CoreML.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Use photo library for learning CoreML.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -487,6 +506,7 @@
 				DEVELOPMENT_TEAM = A2DNT83345;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Learning-CoreML/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Use camera for learning CoreML.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Use photo library for learning CoreML.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -529,6 +549,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6915BE362881319F00A69AF8 /* XCRemoteSwiftPackageReference "SwiftUIChipGroup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Open-Bytes/SwiftUIChipGroup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		698C1594288133370014C394 /* SwiftUIChipGroup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6915BE362881319F00A69AF8 /* XCRemoteSwiftPackageReference "SwiftUIChipGroup" */;
+			productName = SwiftUIChipGroup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 695B44A3287D0F2600231694 /* Project object */;
 }

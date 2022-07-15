@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftuichipgroup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Open-Bytes/SwiftUIChipGroup",
+      "state" : {
+        "revision" : "11ce46abfeccd894cd94bcf98034f16eafb3be35",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

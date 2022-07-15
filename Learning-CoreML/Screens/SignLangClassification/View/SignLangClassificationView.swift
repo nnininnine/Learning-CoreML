@@ -11,6 +11,7 @@ struct SignLangClassificationView: View {
   var body: some View {
     Text("Sign Language Classification")
       .navigationTitle("Sign Language")
+      .navigationBarTitleDisplayMode(.inline)
   }
 }
 

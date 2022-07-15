@@ -11,7 +11,8 @@ class HomeViewModel: ObservableObject {
   // MARK: Properties
 
   let modules: Modules = [
-    Module(name: "Image Classification", view: AnyView(ImageClassificationView()))
+    Module(name: "Image Classification", view: AnyView(ImageClassificationView())),
+    Module(name: "Sign Language Classification", view: AnyView(SignLangClassificationView()))
   ]
 
   // MARK: Methods

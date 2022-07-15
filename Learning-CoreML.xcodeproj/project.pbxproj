@@ -66,6 +66,7 @@
 		69336B5528810B6100778B27 /* SignLangClassification */ = {
 			isa = PBXGroup;
 			children = (
+				698C15C32881694D0014C394 /* Model */,
 				69336B5628810B7400778B27 /* View */,
 			);
 			path = SignLangClassification;
@@ -157,7 +158,6 @@
 		695B44BD287D100700231694 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				698C15BF28815BAB0014C394 /* sign-language-classification.mlpackage */,
 				695B44C0287D104600231694 /* SqueezeNet.mlmodel */,
 			);
 			path = Model;
@@ -255,6 +255,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		698C15C32881694D0014C394 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				698C15BF28815BAB0014C394 /* sign-language-classification.mlpackage */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
